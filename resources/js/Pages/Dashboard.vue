@@ -1,29 +1,20 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import AdminSideNav from '@/Pages/Admin/AdminSideNav.vue';
+import AdminDashboard from '@/Pages/Admin/AdminDashboard.vue';
 </script>
 
 <template>
-    <Head title="Dashboard" />
-
     <AuthenticatedLayout>
-        <template #header>
-            <h2
-                class="text-xl font-semibold leading-tight text-gray-800"
-            >
-                Dashboard
-            </h2>
-        </template>
+        <div class="flex h-screen">
+            <!-- Sidebar (Fixed Width) -->
+            <div class="w-64  text-white">
+                <AdminSideNav/>
+            </div>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div
-                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
-                >
-                    <div class="p-6 text-gray-900">
-                        You're logged in!
-                    </div>
-                </div>
+            <!-- Dashboard (Takes Remaining Space) -->
+            <div class="flex-1 p-6">
+                <AdminDashboard/>
             </div>
         </div>
     </AuthenticatedLayout>
