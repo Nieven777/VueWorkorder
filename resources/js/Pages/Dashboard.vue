@@ -2,10 +2,11 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import AdminSideNav from '@/Pages/Admin/AdminSideNav.vue';
 import AdminDashboard from '@/Pages/Admin/AdminDashboard.vue';
+import AdminTopNav from '@/Pages/Admin/AdminTopNav.vue';
 </script>
 
 <template>
-    <AuthenticatedLayout>
+    <AdminTopNav>
         <div class="flex h-screen">
             <!-- Sidebar (Fixed Width) -->
             <div class="w-64  text-white">
@@ -17,5 +18,5 @@ import AdminDashboard from '@/Pages/Admin/AdminDashboard.vue';
                 <AdminDashboard/>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </AdminTopNav>
 </template>

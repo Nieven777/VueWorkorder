@@ -8,6 +8,11 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
  
 const showingNavigationDropdown = ref(false);
+defineProps({ 
+    canRegister: {
+        type: Boolean,
+    },
+});
 </script>
 
 <template>
@@ -76,6 +81,13 @@ const showingNavigationDropdown = ref(false);
                                             as="button"
                                         >
                                             Log Out
+                                        </DropdownLink>
+                                        <DropdownLink 
+                                            :href="route('register')"
+                                            method="post"
+                                            as="button"
+                                        >
+                                            Register
                                         </DropdownLink>
                                     </template>
                                 </Dropdown>
